@@ -55,3 +55,13 @@
   background-color: white;
   overflow: scroll;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .sidebar__search {
+    display: none;
+  }
+}

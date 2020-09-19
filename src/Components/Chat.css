@@ -95,3 +95,24 @@
   padding: 10px;
   color: gray;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .chat__header {
+    display: none;
+  }
+
+  .chat__footer {
+    height: 6vh;
+    background-color: white;
+    margin: 10px;
+    position: fixed;
+    bottom: -10px;
+    width: 100vw;
+    margin-left: -19px;
+  }
+}

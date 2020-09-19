@@ -24,6 +24,15 @@ function SidebarChat({ id, name, addNewChat }) {
     setSeed(Math.floor(Math.random() * 5000));
   }, []);
 
+  const scrollToElement = () => {
+    console.log("working");
+    var element = document.querySelector(".chat__body");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const createChat = () => {
     const roomName = prompt("Please enter name for the chat room");
     if (roomName) {
@@ -35,7 +44,7 @@ function SidebarChat({ id, name, addNewChat }) {
   };
 
   return !addNewChat ? (
-    <Link to={`/rooms/${id}`}>
+    <Link onClick={scrollToElement} to={`/rooms/${id}`}>
       <div className="sidebarChat">
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="sidebarChat__info">
