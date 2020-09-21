@@ -1,3 +1,7 @@
+:root {
+  filter: inherit(100%);
+}
+
 .app {
   display: grid;
   place-items: center;
@@ -22,10 +26,9 @@
 
   .app {
     background-color: white;
-    /* height: -1; */
   }
   .app__body {
-    display: block;
     background-color: white;
+    display: grid;
   }
 }
